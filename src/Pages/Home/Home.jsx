@@ -95,9 +95,6 @@ const Home = () => {
           {/* Feature 1 */}
           <div className="feature-item" ref={setFeatureRef(0)}>
             <div className="feature-text">
-              <div className="feature-icon">
-                <i className="fas fa-file-invoice"></i>
-              </div>
               <h3 className="feature-title">Professional Invoice Creation</h3>
               <p className="feature-description">
                 Create detailed, professional invoices with itemized lists, quantities, prices, and automatic totals. 
@@ -112,9 +109,6 @@ const Home = () => {
           {/* Feature 2 */}
           <div className="feature-item reverse" ref={setFeatureRef(1)}>
             <div className="feature-text">
-              <div className="feature-icon">
-                <i className="fas fa-calculator"></i>
-              </div>
               <h3 className="feature-title">Automatic Tax & Total Calculation</h3>
               <p className="feature-description">
                 Let our system handle all the calculations. Automatically add taxes, apply discounts, 
@@ -129,9 +123,6 @@ const Home = () => {
           {/* Feature 3 */}
           <div className="feature-item" ref={setFeatureRef(2)}>
             <div className="feature-text">
-              <div className="feature-icon">
-                <i className="fas fa-history"></i>
-              </div>
               <h3 className="feature-title">Invoice History & Tracking</h3>
               <p className="feature-description">
                 Keep track of all your invoices with our organized history system. Filter by status (pending/paid), 
@@ -146,9 +137,6 @@ const Home = () => {
           {/* Feature 4 */}
           <div className="feature-item reverse" ref={setFeatureRef(3)}>
             <div className="feature-text">
-              <div className="feature-icon">
-                <i className="fas fa-paint-brush"></i>
-              </div>
               <h3 className="feature-title">Customizable Templates</h3>
               <p className="feature-description">
                 Personalize your invoices with our customizable templates. Add your logo, choose color schemes that match your brand, 

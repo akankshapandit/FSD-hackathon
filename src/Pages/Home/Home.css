@@ -209,14 +209,14 @@ body {
   align-items: center;
   margin-bottom: 80px;
   gap: 50px;
-  opacity: 0;
-  transform: translateX(-100px);
+  opacity: 1; 
+  transform: none; 
   transition: all 0.8s ease-out;
 }
 
 .feature-item.reverse {
   flex-direction: row-reverse;
-  transform: translateX(100px);
+  transform: none; 
 }
 
 .feature-item.animate-visible {
@@ -228,11 +228,7 @@ body {
   flex: 1;
 }
 
-.feature-icon {
-  font-size: 2.5rem;
-  color: #3498db;
-  margin-bottom: 20px;
-}
+
 
 .feature-title {
   font-size: 1.5rem;
