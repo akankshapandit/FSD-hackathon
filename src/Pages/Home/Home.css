@@ -194,7 +194,7 @@ body {
 /* Features Section */
 .features {
   padding: 80px 0;
-  background-color: #fff;
+  background-color: #03011610;
 }
 
 .section-title {
@@ -209,7 +209,7 @@ body {
   align-items: center;
   margin-bottom: 80px;
   gap: 50px;
-  opacity: 0;
+  opacity: 0;  /* 👈 ye change karein */
   transform: translateX(-100px);
   transition: all 0.8s ease-out;
 }
@@ -224,14 +224,10 @@ body {
   transform: translateX(0);
 }
 
+
 .feature-text {
   flex: 1;
-}
-
-.feature-icon {
-  font-size: 2.5rem;
-  color: #3498db;
-  margin-bottom: 20px;
+  color:#002a2d;
 }
 
 .feature-title {
@@ -241,7 +237,7 @@ body {
 }
 
 .feature-description {
-  color: #7f8c8d;
+  color: #002a2d;
   line-height: 1.8;
   font-size: 1.1rem;
 }
@@ -265,7 +261,7 @@ body {
 }
 
 .feature-image img {
-  max-width: 100%;
+  max-width: 80%;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;

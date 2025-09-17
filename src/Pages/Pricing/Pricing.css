@@ -148,7 +148,7 @@
 
 
 
-.feature-item {
+.featurepr-item {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -252,7 +252,7 @@
   color: green;
   font-size: 14px;
 }
-.feature-item span {
+.featurepr-item span {
   color: #333;   /* text visible color */
   font-size: 14px;
 }

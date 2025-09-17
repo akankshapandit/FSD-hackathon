@@ -8,7 +8,7 @@ const About = () => {
   return (
     <div className="about-container">
       {/* Back Button */}
-      <button className="back-button" onClick={() => navigate("/home")}>
+      <button className="back-button" onClick={() => window.history.back()}>
         ← Back to Home
       </button>
 
