@@ -78,7 +78,7 @@ const Home = () => {
             <p className="hero-subheading">Create professional invoices in seconds. Send via WhatsApp or Email, accept multiple payment methods, and streamline your billing process with our AI-powered platform.</p>
             <div className="hero-buttons">
               <Link to="/signup" className="btn btn-primary">Get Started Free</Link>
-              <button className="btn btn-secondary">Watch Demo</button>
+              <Link to="/demo"><button className="btn btn-secondary">Watch Demo</button></Link>
             </div>
           </div>
           <div className="hero-image">

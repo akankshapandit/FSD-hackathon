@@ -11,7 +11,7 @@ const Pricing = () => {
       price: "₹0",
       period: "forever",
       description: "Perfect for freelancers and small businesses just getting started",
-      features: [
+      featurespr: [
         "5 invoices per month",
         "Basic templates",
         "Email delivery",
@@ -26,7 +26,7 @@ const Pricing = () => {
       price: "₹200",
       period: "per month",
       description: "Ideal for growing businesses with more invoicing needs",
-      features: [
+      featurespr: [
         "Unlimited invoices",
         "Premium templates",
         "Email + WhatsApp delivery",
@@ -42,7 +42,7 @@ const Pricing = () => {
       price: "₹500",
       period: "per month",
       description: "For established businesses with advanced needs",
-      features: [
+      featurespr: [
         "Everything in Pro",
         "Custom branding",
         "Team members (up to 5)",
@@ -61,9 +61,9 @@ const Pricing = () => {
       <div className="back-button-container">
   <Link to={"/home"}><button 
     className="btn-back" 
-    onClick={() => navigate('/homepage')}
+    onClick={() => window.history.back()}
   >
-    Back to Homepage
+    Back 
   </button></Link>
 </div>
 
@@ -100,8 +100,8 @@ const Pricing = () => {
                 
                 {console.log("Plan Features:", plan.features)}
 <ul className="plan-features">
-  {plan.features.map((feature, i) => (
-    <li key={i} className="feature-item">
+  {plan.featurespr.map((feature, i) => (
+    <li key={i} className="featurepr-item">
       <FaCheck className="check-icon" />
       <span>{feature}</span>
     </li>

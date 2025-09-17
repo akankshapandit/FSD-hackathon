@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Auth.css';
+import './Login.css';
 
 const Login = () => {
   const [formData, setFormData] = useState({
@@ -24,23 +24,23 @@ const Login = () => {
   };
 
   return (
-    <div className="auth-page">
-      <div className="auth-container">
-        <div className="auth-card">
-          <div className="auth-header">
-            <Link to="/" className="auth-logo">
-              <i className="fas fa-receipt"></i>
+    <div className="login-page">
+      <div className="login-container">
+        <div className="login-card">
+          <div className="login-header">
+            <Link to="/" className="login-logo">
+              <i className="fas fa-file-invoice-dollar"></i>
               <span>InvoiceFlow</span>
             </Link>
             <h1>Welcome Back</h1>
             <p>Sign in to your account to continue</p>
           </div>
 
-          <form className="auth-form" onSubmit={handleSubmit}>
+          <form className="login-form" onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="email">Email Address</label>
+              <label htmlFor="email">Email Address <i className="fas fa-envelope"></i></label>
               <div className="input-with-icon">
-                <i className="fas fa-envelope"></i>
+                
                 <input
                   type="email"
                   id="email"
@@ -55,11 +55,11 @@ const Login = () => {
 
             <div className="form-group">
               <div className="password-label">
-                <label htmlFor="password">Password</label>
+                <label htmlFor="password">Password <i className="fas fa-lock"></i></label>
                 <Link to="/forgot-password" className="forgot-link">Forgot password?</Link>
               </div>
               <div className="input-with-icon">
-                <i className="fas fa-lock"></i>
+                
                 <input
                   type="password"
                   id="password"
@@ -85,30 +85,15 @@ const Login = () => {
               </label>
             </div>
 
-            <button type="submit" className="btn btn-primary btn-auth">Sign In</button>
+            <button type="submit" className="btn btn-primary btn-login">Sign In</button>
           </form>
 
-          <div className="auth-divider">
-            <span>or continue with</span>
-          </div>
-
-          <div className="social-auth">
-            <button className="btn btn-google">
-              <i className="fab fa-google"></i>
-              Google
-            </button>
-            <button className="btn btn-facebook">
-              <i className="fab fa-facebook-f"></i>
-              Facebook
-            </button>
-          </div>
-
-          <div className="auth-footer">
-            <p>Don't have an account? <Link to="/signup" className="auth-link">Sign up</Link></p>
+          <div className="login-footer">
+            <p>Don't have an account? <Link to="/signup" className="login-link">Sign up</Link></p>
           </div>
         </div>
 
-        <div className="auth-graphics">
+        <div className="login-graphics">
           <div className="graphics-content">
             <h2>Streamline Your Invoicing Process</h2>
             <p>Access your account to create professional invoices, track payments, and manage your business finances.</p>
@@ -119,7 +104,7 @@ const Login = () => {
               </div>
               <div className="graphics-feature">
                 <i className="fas fa-paper-plane"></i>
-                <span>WhatsApp & Email Delivery</span>
+                <span>WhatsApp Delivery</span>
               </div>
               <div className="graphics-feature">
                 <i className="fas fa-chart-line"></i>

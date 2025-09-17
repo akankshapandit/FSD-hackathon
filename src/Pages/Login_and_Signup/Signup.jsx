@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import './Auth.css';
+import './Signup.css';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
+    username: '',
     email: '',
     password: '',
     confirmPassword: '',
@@ -27,57 +26,39 @@ const Signup = () => {
   };
 
   return (
-    <div className="auth-page">
-      <div className="auth-container">
-        <div className="auth-card">
-          <div className="auth-header">
-            <Link to="/" className="auth-logo">
-              <i className="fas fa-receipt"></i>
+    <div className="signup-page">
+      <div className="signup-container">
+        <div className="signup-card">
+          <div className="signup-header">
+            <Link to="/" className="signup-logo">
+              <i className="fas fa-file-invoice-dollar"></i>
               <span>InvoiceFlow</span>
             </Link>
             <h1>Create Account</h1>
             <p>Get started with your free account today</p>
           </div>
 
-          <form className="auth-form" onSubmit={handleSubmit}>
-            <div className="form-row">
-              <div className="form-group">
-                <label htmlFor="firstName">First Name</label>
-                <div className="input-with-icon">
-                  <i className="fas fa-user"></i>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    placeholder="Enter your first name"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="lastName">Last Name</label>
-                <div className="input-with-icon">
-                  <i className="fas fa-user"></i>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    placeholder="Enter your last name"
-                    required
-                  />
-                </div>
+          <form className="signup-form" onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="username">Username <i className="fas fa-user"></i></label>
+              <div className="input-with-icon">
+                
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  value={formData.username}
+                  onChange={handleChange}
+                  placeholder="Choose a username"
+                  required
+                />
               </div>
             </div>
 
             <div className="form-group">
-              <label htmlFor="email">Email Address</label>
+              <label htmlFor="email">Email Address <i className="fas fa-envelope"></i></label>
               <div className="input-with-icon">
-                <i className="fas fa-envelope"></i>
+                
                 <input
                   type="email"
                   id="email"
@@ -91,9 +72,9 @@ const Signup = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">Password <i className="fas fa-lock"></i></label>
               <div className="input-with-icon">
-                <i className="fas fa-lock"></i>
+                
                 <input
                   type="password"
                   id="password"
@@ -110,9 +91,9 @@ const Signup = () => {
             </div>
 
             <div className="form-group">
-              <label htmlFor="confirmPassword">Confirm Password</label>
+              <label htmlFor="confirmPassword">Confirm Password <i className="fas fa-lock"></i></label>
               <div className="input-with-icon">
-                <i className="fas fa-lock"></i>
+                
                 <input
                   type="password"
                   id="confirmPassword"
@@ -139,30 +120,15 @@ const Signup = () => {
               </label>
             </div>
 
-            <button type="submit" className="btn btn-primary btn-auth">Create Account</button>
+            <button type="submit" className="btn btn-primary btn-signup">Create Account</button>
           </form>
 
-          <div className="auth-divider">
-            <span>or sign up with</span>
-          </div>
-
-          <div className="social-auth">
-            <button className="btn btn-google">
-              <i className="fab fa-google"></i>
-              Google
-            </button>
-            <button className="btn btn-facebook">
-              <i className="fab fa-facebook-f"></i>
-              Facebook
-            </button>
-          </div>
-
-          <div className="auth-footer">
-            <p>Already have an account? <Link to="/login" className="auth-link">Sign in</Link></p>
+          <div className="signup-footer">
+            <p>Already have an account? <Link to="/login" className="signup-link">Sign in here</Link></p>
           </div>
         </div>
 
-        <div className="auth-graphics">
+        <div className="signup-graphics">
           <div className="graphics-content">
             <h2>Start Invoicing Like a Pro</h2>
             <p>Join thousands of businesses that use InvoiceFlow to save time, get paid faster, and look professional.</p>

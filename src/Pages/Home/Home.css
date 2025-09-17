@@ -91,7 +91,7 @@ body {
 
 .btn-login {
   background-color: transparent;
-  color: #3498db;
+  color:#3498db;
   border: 1px solid #3498db;
 }
 
@@ -101,13 +101,16 @@ body {
 }
 
 .btn-signup {
+  background-color: transparent;
+  color: #3498db;
+  border: 1px solid #3498db;
+}
+
+.btn-signup:hover {
   background-color: #3498db;
   color: #fff;
 }
 
-.btn-signup:hover {
-  background-color: #2980b9;
-}
 
 .btn-primary {
   background-color: #3498db;
@@ -194,7 +197,7 @@ body {
 /* Features Section */
 .features {
   padding: 80px 0;
-  background-color: #fff;
+  background-color: #03011610;
 }
 
 .section-title {
@@ -209,14 +212,14 @@ body {
   align-items: center;
   margin-bottom: 80px;
   gap: 50px;
-  opacity: 1; 
-  transform: none; 
+  opacity: 0;               /* start hidden */
+  transform: translateX(-100px); /* slide-in from left */
   transition: all 0.8s ease-out;
 }
 
 .feature-item.reverse {
   flex-direction: row-reverse;
-  transform: none; 
+  transform: none;
 }
 
 .feature-item.animate-visible {
@@ -226,6 +229,7 @@ body {
 
 .feature-text {
   flex: 1;
+  color: #002a2d;
 }
 
 
@@ -237,7 +241,7 @@ body {
 }
 
 .feature-description {
-  color: #7f8c8d;
+  color: #002a2d;
   line-height: 1.8;
   font-size: 1.1rem;
 }
@@ -261,7 +265,7 @@ body {
 }
 
 .feature-image img {
-  max-width: 100%;
+  max-width: 80%;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;

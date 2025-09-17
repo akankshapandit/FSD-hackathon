@@ -185,9 +185,9 @@ const InvoiceGenerator = () => {
         <div className="header-content">
           <div className="logo-container">
             <div className="logo">
-              <i className="fas fa-receipt"></i>
+              <i className="fas fa-file-invoice-dollar"></i>
             </div>
-            <h1 className="invoice-title">Invoice<span>Pro</span></h1>
+            <h1 className="invoice-title">InvoiceFlow</h1>
           </div>
           <div className="invoice-meta-preview">
             <span className="invoice-badge">Invoice #: {metadata.invoiceNo}</span>
