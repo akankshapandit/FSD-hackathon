@@ -1,20 +1,11 @@
 .about-container {
   padding: 40px;
   font-family: 'Poppins', sans-serif;
-   background: linear-gradient(135deg, #4498e1, #d3f0f1);
-  background-size: 400% 400%;
-  animation: gradientBG 12s ease infinite;
+  background: #4498e1; /* Solid blue background */
   min-height: 100vh;
-  color: #fff;
+  color: #000; /* Default black text */
   text-align: center;
-  position: relative; /* Needed for absolute child */
-}
-
-/* Moving Gradient Background */
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  position: relative;
 }
 
 /* Back Button - Top Left Corner */
@@ -22,7 +13,7 @@
   position: absolute;
   top: 20px;
   left: 20px;
-  background: linear-gradient(45deg, #0072ff, #00c6ff);
+  background: #0072ff;
   color: white;
   border: none;
   padding: 12px 25px;
@@ -34,46 +25,37 @@
 }
 
 .back-button:hover {
-  transform: scale(1.1) rotate(-2deg);
+  transform: scale(1.1);
   box-shadow: 0 6px 18px rgba(0,0,0,0.3);
 }
 
 /* Hero Section */
 .about-hero h1 {
   font-size: 48px;
-  background: linear-gradient(90deg, #0072ff, #00c6ff, #2193b0, #6dd5ed);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: pulseText 3s infinite;
-}
-
-@keyframes pulseText {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.08); }
+  color: #fff; /* White heading text */
 }
 
 .about-hero p {
   font-size: 20px;
-  color: #e6f2ff;
+  color: #f1f1f1; /* Light gray for contrast */
   margin-top: 15px;
-  opacity: 0.9;
   animation: slideIn 1s ease forwards;
 }
 
 /* Cards (Mission, Vision, Values, Team) */
 .card, .value-card, .team-card {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
+  background: #fff; /* White card background */
+  color: #000; /* Black text inside cards */
+  border-radius: 12px;
   padding: 25px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(68, 152, 225, 0.3); /* Blue shadow */
   margin-bottom: 25px;
-  transition: all 0.4s ease;
-  backdrop-filter: blur(8px);
+  transition: all 0.3s ease;
 }
 
 .card:hover, .value-card:hover, .team-card:hover {
-  transform: translateY(-10px) rotate(1deg) scale(1.05);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(68, 152, 225, 0.5); /* Stronger blue shadow */
 }
 
 /* Values Grid */
@@ -88,18 +70,18 @@
 .team-card img {
   border-radius: 50%;
   margin-bottom: 15px;
-  border: 4px solid #fff;
+  border: 3px solid #4498e1;
   transition: transform 0.3s ease;
 }
 
 .team-card:hover img {
-  transform: rotate(360deg) scale(1.2);
+  transform: scale(1.1);
 }
 
 /* Fade + Pop Animation */
 .fade-in {
   opacity: 0;
-  transform: scale(0.8) translateY(30px);
+  transform: scale(0.9) translateY(30px);
   animation: popIn 0.8s forwards;
 }
 
@@ -121,18 +103,6 @@
 .delay-9 { animation-delay: 2.7s; }
 .delay-10 { animation-delay: 3s; }
 .delay-11 { animation-delay: 3.3s; }
-
-/* Fun Hover Glow */
-.value-card h3, .team-card h3 {
-  background: linear-gradient(90deg, #0072ff, #00c6ff, #2193b0, #6dd5ed);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 0.3s ease;
-}
-
-.value-card:hover h3, .team-card:hover h3 {
-  text-shadow: 0 0 15px rgba(173, 216, 230, 0.9);
-}
 
 /* Slide In Text Animation */
 @keyframes slideIn {
