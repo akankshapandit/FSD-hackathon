@@ -63,7 +63,7 @@ const About = () => {
         <h2 className="fade-in delay-9">👨‍💻 Meet the Team</h2>
         <div className="team-grid">
           {[
-            { name: "Akanksha Pandit", role: "API part" },
+            { name: "Akanksha Pandit", role: "Full Stack Engineer" },
             { name: "Aparichita Padhee", role: "Backend Engineer" },
             { name: "Harsh Raj", role: "Frontend Engineer" },
             { name: "Akanksha Kumari", role: "abc" }
