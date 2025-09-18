@@ -1,7 +1,7 @@
 .about-container {
   padding: 40px;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #4facfe, #00f2fe, #43e97b, #38f9d7);
+   background: linear-gradient(135deg, #4498e1, #d3f0f1);
   background-size: 400% 400%;
   animation: gradientBG 12s ease infinite;
   min-height: 100vh;
