@@ -10,10 +10,13 @@ import './App.css';
 import Homepage from './Pages/Homepage/Homepage.jsx';
 import Demo from './Pages/Demo/Demo.jsx';
 import History from './Pages/History/History.jsx';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ScrollToTop from "../components/scrollToTop.jsx"
 
 function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* 👈 this will reset scroll on every route change */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

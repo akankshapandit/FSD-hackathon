@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Contact.css';
+import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -27,6 +28,12 @@ const Contact = () => {
       subject: '',
       message: ''
     });
+  };
+   const navigate = useNavigate();
+
+  const handleNavigation = (path) => {
+    navigate(path);
+    window.scrollTo(0, 0); // 👈 scroll to top after navigating
   };
 
   return (
