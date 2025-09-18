@@ -63,13 +63,12 @@ const About = () => {
         <h2 className="fade-in delay-9">👨‍💻 Meet the Team</h2>
         <div className="team-grid">
           {[
-            { name: "Akanksha Pandit", role: "Api part" },
+            { name: "Akanksha Pandit", role: "API part" },
             { name: "Aparichita Padhee", role: "Backend Engineer" },
             { name: "Harsh Raj", role: "Frontend Engineer" },
-            {name:"Akanksha Kumari", role:"abc"}
+            { name: "Akanksha Kumari", role: "abc" }
           ].map((member, idx) => (
             <div className={`team-card fade-in delay-${10 + idx}`} key={member.name}>
-              <img src="https://via.placeholder.com/150" alt={member.name} />
               <h3>{member.name}</h3>
               <p>{member.role}</p>
             </div>
