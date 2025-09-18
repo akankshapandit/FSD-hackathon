@@ -11,7 +11,6 @@ const Homepage1 = ({ navigateTo }) => {
     <div className="homepage1">
       <nav className="navbar1">
         <div className="nav-container1">
-          {/* Logo */}
           <div 
             className={`nav-logo1 ${logoHovered1 ? 'animate1' : ''}`}
             onMouseEnter={() => setLogoHovered1(true)}
@@ -22,44 +21,35 @@ const Homepage1 = ({ navigateTo }) => {
           </div>
 
           {/* Hamburger Icon */}
-          <div 
-            className={`hamburger1 ${menuOpen ? 'active' : ''}`} 
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
+          <div className="hamburger1" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <i className="fas fa-bars"></i>
           </div>
 
           {/* Nav Menu */}
-          <div className={`nav-menu1 ${menuOpen ? 'open' : ''}`}>
+          <div className={`nav-menu1 ${isMenuOpen ? 'active' : ''}`}>
             <Link to="/pricing" className="nav-link1">
-              <i className="fas fa-tags"></i>
-              Pricing
+              <i className="fas fa-tags"></i> Pricing
             </Link>
             <Link to="/demo" className="nav-link1">
-              <i className="fas fa-play-circle"></i>
-              Demo
+              <i className="fas fa-play-circle"></i> Demo
             </Link>
             <Link to="/contact" className="nav-link1">
-              <i className="fas fa-envelope"></i>
-              Contact
+              <i className="fas fa-envelope"></i> Contact
             </Link>
             <Link to="/about" className="nav-link1">
-              <i className="fas fa-info-circle"></i>
-              About
+              <i className="fas fa-info-circle"></i> About
             </Link>
             <Link to="/history" className="nav-link1">
-              <i className="fas fa-history"></i>
-              History
+              <i className="fas fa-history"></i> History
             </Link>
             <Link to="/" className="nav-link1 logout1">
-              <i className="fas fa-sign-out-alt"></i>
-              Logout
+              <i className="fas fa-sign-out-alt"></i> Logout
             </Link>
           </div>
         </div>
       </nav>
+      {/* rest of your homepage code */}
+    
 
       <main className="main-content1">
         <section className="hero1">
