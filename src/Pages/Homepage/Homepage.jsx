@@ -5,11 +5,13 @@ import { Link } from 'react-router-dom';
 
 const Homepage1 = ({ navigateTo }) => {
   const [logoHovered1, setLogoHovered1] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false); // NEW STATE
 
   return (
     <div className="homepage1">
       <nav className="navbar1">
         <div className="nav-container1">
+          {/* Logo */}
           <div 
             className={`nav-logo1 ${logoHovered1 ? 'animate1' : ''}`}
             onMouseEnter={() => setLogoHovered1(true)}
@@ -18,8 +20,19 @@ const Homepage1 = ({ navigateTo }) => {
             <i className="fas fa-file-invoice-dollar"></i>
             <span>InvoiceFlow</span>
           </div>
-          <div className="nav-menu1">
-            
+
+          {/* Hamburger Icon */}
+          <div 
+            className={`hamburger1 ${menuOpen ? 'active' : ''}`} 
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          {/* Nav Menu */}
+          <div className={`nav-menu1 ${menuOpen ? 'open' : ''}`}>
             <Link to="/pricing" className="nav-link1">
               <i className="fas fa-tags"></i>
               Pricing
@@ -36,11 +49,9 @@ const Homepage1 = ({ navigateTo }) => {
               <i className="fas fa-info-circle"></i>
               About
             </Link>
-            <Link to="/history" className='nav-link1'>
-            
+            <Link to="/history" className="nav-link1">
               <i className="fas fa-history"></i>
               History
-            
             </Link>
             <Link to="/" className="nav-link1 logout1">
               <i className="fas fa-sign-out-alt"></i>
