@@ -5,7 +5,11 @@ import { Link } from 'react-router-dom';
 
 const Homepage1 = ({ navigateTo }) => {
   const [logoHovered1, setLogoHovered1] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false); // NEW STATE
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <div className="homepage1">
@@ -19,35 +23,42 @@ const Homepage1 = ({ navigateTo }) => {
             <i className="fas fa-file-invoice-dollar"></i>
             <span>InvoiceFlow</span>
           </div>
-
-          {/* Hamburger Icon */}
-          <div className="hamburger1" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-            <i className="fas fa-bars"></i>
-          </div>
-
-          {/* Nav Menu */}
+          
           <div className={`nav-menu1 ${isMenuOpen ? 'active' : ''}`}>
-            <Link to="/pricing" className="nav-link1">
-              <i className="fas fa-tags"></i> Pricing
+            <Link to="/pricing" className="nav-link1" onClick={() => setIsMenuOpen(false)}>
+              <i className="fas fa-tags"></i>
+              Pricing
             </Link>
-            <Link to="/demo" className="nav-link1">
-              <i className="fas fa-play-circle"></i> Demo
+            <Link to="/demo" className="nav-link1" onClick={() => setIsMenuOpen(false)}>
+              <i className="fas fa-play-circle"></i>
+              Demo
             </Link>
-            <Link to="/contact" className="nav-link1">
-              <i className="fas fa-envelope"></i> Contact
+            <Link to="/contact" className="nav-link1" onClick={() => setIsMenuOpen(false)}>
+              <i className="fas fa-envelope"></i>
+              Contact
             </Link>
-            <Link to="/about" className="nav-link1">
-              <i className="fas fa-info-circle"></i> About
+            <Link to="/about" className="nav-link1" onClick={() => setIsMenuOpen(false)}>
+              <i className="fas fa-info-circle"></i>
+              About
             </Link>
-            <Link to="/history" className="nav-link1">
-              <i className="fas fa-history"></i> History
+            <Link to="/history" className='nav-link1' onClick={() => setIsMenuOpen(false)}>
+              <i className="fas fa-history"></i>
+              History
             </Link>
-            <Link to="/" className="nav-link1 logout1">
-              <i className="fas fa-sign-out-alt"></i> Logout
+            <Link to="/" className="nav-link1 logout1" onClick={() => setIsMenuOpen(false)}>
+              <i className="fas fa-sign-out-alt"></i>
+              Logout
             </Link>
+          </div>
+          
+          <div className="hamburger1" onClick={toggleMenu}>
+            <span className="bar1"></span>
+            <span className="bar1"></span>
+            <span className="bar1"></span>
           </div>
         </div>
       </nav>
+
       {/* rest of your homepage code */}
     
 
